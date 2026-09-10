@@ -1,0 +1,1349 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #f7f5ef;
+    color: #202522;
+    line-height: 1.6;
+}
+
+section {
+    scroll-margin-top: 90px;
+}
+
+
+/* =========================
+   CORES
+========================= */
+
+:root {
+
+    --verde: #24483a;
+    --verde-claro: #dce9df;
+
+    --rosa: #d96c83;
+    --rosa-claro: #f2d5da;
+
+    --creme: #f7f5ef;
+    --branco: #ffffff;
+
+    --texto: #202522;
+    --cinza: #68716c;
+
+    --borda: #dfe3df;
+}
+
+
+/* =========================
+   HEADER
+========================= */
+
+header {
+
+    background: rgba(247, 245, 239, 0.96);
+
+    color: var(--verde);
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 18px 8%;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 1000;
+
+    border-bottom: 1px solid var(--borda);
+
+    backdrop-filter: blur(10px);
+}
+
+
+.logo {
+
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.logo h1 {
+
+    font-size: 1.4rem;
+
+    letter-spacing: -0.5px;
+}
+
+
+.logo-simbolo {
+
+    width: 38px;
+    height: 38px;
+
+    border-radius: 50%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--verde);
+
+    color: white;
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 28px;
+}
+
+
+nav a {
+
+    color: var(--texto);
+
+    text-decoration: none;
+
+    font-size: 0.92rem;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+
+nav a:hover {
+
+    color: var(--rosa);
+
+}
+
+
+/* =========================
+   BANNER
+========================= */
+
+.banner {
+
+    min-height: 82vh;
+
+    background:
+
+        linear-gradient(
+            rgba(20, 43, 34, .72),
+            rgba(20, 43, 34, .72)
+        ),
+
+        url("./img/banner-esmalte.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    color: white;
+
+    padding: 60px 8%;
+}
+
+
+.banner-conteudo {
+
+    max-width: 900px;
+
+}
+
+
+.tag {
+
+    display: inline-block;
+
+    padding: 7px 15px;
+
+    border: 1px solid rgba(255,255,255,.6);
+
+    border-radius: 50px;
+
+    font-size: .78rem;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 25px;
+}
+
+
+.banner h2 {
+
+    font-size: clamp(3rem, 7vw, 6rem);
+
+    line-height: 1;
+
+    margin-bottom: 25px;
+
+    font-weight: 300;
+
+}
+
+
+.banner h2 strong {
+
+    color: #f2b7c3;
+
+    font-weight: 700;
+
+}
+
+
+.banner p {
+
+    max-width: 650px;
+
+    margin: 0 auto 35px;
+
+    font-size: 1.2rem;
+
+    color: #f2f2f2;
+
+}
+
+
+.btn {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+    background: var(--rosa);
+
+    color: white;
+
+    padding: 15px 28px;
+
+    text-decoration: none;
+
+    border-radius: 50px;
+
+    font-weight: bold;
+
+    transition: .3s;
+}
+
+
+.btn:hover {
+
+    transform: translateY(-3px);
+
+    background: #c85b73;
+
+}
+
+
+/* =========================
+   TÍTULOS
+========================= */
+
+.titulo-secao {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+}
+
+
+.titulo-secao > span {
+
+    color: var(--rosa);
+
+    font-size: .78rem;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+}
+
+
+.titulo-secao h2 {
+
+    color: var(--verde);
+
+    font-size: clamp(2rem, 4vw, 3.4rem);
+
+    line-height: 1.1;
+
+    margin-top: 12px;
+
+    max-width: 750px;
+}
+
+
+.titulo-secao p {
+
+    margin-top: 18px;
+
+    color: var(--cinza);
+
+    max-width: 700px;
+}
+
+
+.centralizado {
+
+    text-align: center;
+}
+
+
+.centralizado h2,
+.centralizado p {
+
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+/* =========================
+   INTRODUÇÃO
+========================= */
+
+.introducao {
+
+    padding: 110px 8%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.introducao-conteudo {
+
+    max-width: 650px;
+
+}
+
+
+.introducao-conteudo p {
+
+    color: var(--cinza);
+
+    font-size: 1.08rem;
+
+    margin-bottom: 20px;
+}
+
+
+/* =========================
+   COMPOSIÇÃO
+========================= */
+
+.composicao {
+
+    padding: 110px 8%;
+
+    background: white;
+}
+
+
+.cards {
+
+    max-width: 1100px;
+
+    margin: 60px auto 0;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(auto-fit, minmax(220px, 1fr));
+
+    gap: 22px;
+}
+
+
+.card {
+
+    padding: 35px 28px;
+
+    background: var(--creme);
+
+    border: 1px solid var(--borda);
+
+    border-radius: 20px;
+
+    transition: .3s;
+}
+
+
+.card:hover {
+
+    transform: translateY(-7px);
+
+    border-color: var(--rosa);
+}
+
+
+.icone {
+
+    width: 55px;
+    height: 55px;
+
+    border-radius: 15px;
+
+    background: var(--rosa-claro);
+
+    color: var(--rosa);
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    font-size: 1.4rem;
+
+    margin-bottom: 25px;
+}
+
+
+.card h3 {
+
+    color: var(--verde);
+
+    margin-bottom: 10px;
+
+}
+
+
+.card p {
+
+    color: var(--cinza);
+
+    font-size: .95rem;
+
+}
+
+
+/* =========================
+   IMPACTOS
+========================= */
+
+.impactos {
+
+    padding: 110px 8%;
+
+    background: var(--verde);
+
+    color: white;
+}
+
+
+.impactos .titulo-secao h2 {
+
+    color: white;
+}
+
+
+.impactos .titulo-secao p {
+
+    color: #cbd8d1;
+}
+
+
+.impactos-grid {
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.impacto {
+
+    position: relative;
+
+    padding: 35px;
+
+    border-radius: 20px;
+
+    background: rgba(255,255,255,.08);
+
+    border: 1px solid rgba(255,255,255,.15);
+
+    transition: .3s;
+}
+
+
+.impacto:hover {
+
+    transform: translateY(-6px);
+
+    background: rgba(255,255,255,.12);
+}
+
+
+.impacto i {
+
+    font-size: 2.5rem;
+
+    color: #f2b7c3;
+
+    margin-bottom: 25px;
+}
+
+
+.impacto h3 {
+
+    font-size: 1.5rem;
+
+    margin-bottom: 12px;
+}
+
+
+.impacto p {
+
+    color: #d5dfda;
+
+    font-size: .95rem;
+}
+
+
+.impacto-numero {
+
+    position: absolute;
+
+    top: 20px;
+    right: 25px;
+
+    color: rgba(255,255,255,.3);
+
+    font-size: .8rem;
+}
+
+
+/* =========================
+   CICLO
+========================= */
+
+.ciclo {
+
+    max-width: 1100px;
+
+    margin: 80px auto 0;
+
+    text-align: center;
+}
+
+
+.ciclo h3 {
+
+    margin-bottom: 35px;
+
+    font-size: 1.5rem;
+}
+
+
+.linha-ciclo {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    gap: 20px;
+
+    flex-wrap: wrap;
+}
+
+
+.linha-ciclo div {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    gap: 8px;
+}
+
+
+.linha-ciclo span {
+
+    width: 42px;
+    height: 42px;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    border-radius: 50%;
+
+    background: var(--rosa);
+
+    font-weight: bold;
+}
+
+
+.linha-ciclo strong {
+
+    font-size: .9rem;
+}
+
+
+.linha-ciclo > i {
+
+    color: #91a99c;
+}
+
+
+/* =========================
+   ALTERNATIVAS
+========================= */
+
+.alternativas {
+
+    padding: 110px 8%;
+
+    background: var(--creme);
+}
+
+
+.alternativas-conteudo {
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns: .8fr 1.2fr;
+
+    gap: 80px;
+
+    align-items: center;
+}
+
+
+.alternativa-texto p {
+
+    color: var(--cinza);
+
+    font-size: 1.05rem;
+
+    margin-bottom: 20px;
+}
+
+
+.alternativa-cards {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+}
+
+
+.mini-card {
+
+    display: flex;
+
+    gap: 20px;
+
+    padding: 25px;
+
+    background: white;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 18px;
+}
+
+
+.mini-card > i {
+
+    font-size: 1.7rem;
+
+    color: var(--verde);
+
+    margin-top: 3px;
+}
+
+
+.mini-card h3 {
+
+    color: var(--verde);
+
+    margin-bottom: 5px;
+}
+
+
+.mini-card p {
+
+    color: var(--cinza);
+
+    font-size: .9rem;
+}
+
+
+.observacao {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: flex;
+
+    gap: 15px;
+
+    align-items: flex-start;
+
+    padding: 22px;
+
+    border-radius: 15px;
+
+    background: var(--verde-claro);
+
+    color: var(--verde);
+}
+
+
+.observacao i {
+
+    margin-top: 4px;
+}
+
+
+/* =========================
+   PESQUISA
+========================= */
+
+.pesquisa {
+
+    padding: 110px 8%;
+
+    background: white;
+}
+
+
+.etapas {
+
+    max-width: 1100px;
+
+    margin: 60px auto;
+
+    display: grid;
+
+    grid-template-columns:
+    repeat(4, 1fr);
+
+    gap: 20px;
+}
+
+
+.etapa {
+
+    padding: 30px;
+
+    border-top: 3px solid var(--rosa);
+
+    background: var(--creme);
+}
+
+
+.etapa > span {
+
+    color: var(--rosa);
+
+    font-size: 2rem;
+
+    font-weight: bold;
+}
+
+
+.etapa h3 {
+
+    color: var(--verde);
+
+    margin: 15px 0 10px;
+}
+
+
+.etapa p {
+
+    color: var(--cinza);
+
+    font-size: .9rem;
+}
+
+
+/* =========================
+   DADOS
+========================= */
+
+.dados {
+
+    max-width: 1100px;
+
+    margin: 70px auto 0;
+
+    text-align: center;
+}
+
+
+.dados h3 {
+
+    color: var(--verde);
+
+    font-size: 1.8rem;
+
+    margin-bottom: 10px;
+}
+
+
+.dados > p {
+
+    color: var(--cinza);
+
+    max-width: 650px;
+
+    margin: auto;
+}
+
+
+.dados-placeholder {
+
+    min-height: 250px;
+
+    margin-top: 30px;
+
+    border: 2px dashed #c7cec9;
+
+    border-radius: 20px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 15px;
+
+    color: #89948e;
+}
+
+
+.dados-placeholder i {
+
+    font-size: 3rem;
+
+    color: var(--rosa);
+}
+
+
+.dados-placeholder span {
+
+    font-size: .8rem;
+
+    letter-spacing: 1px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   CONCLUSÃO
+========================= */
+
+.conclusao {
+
+    padding: 120px 8%;
+
+    background:
+
+        linear-gradient(
+            rgba(36,72,58,.94),
+            rgba(36,72,58,.94)
+        ),
+
+        url("./img/conclusao.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+
+    color: white;
+}
+
+
+.conclusao-conteudo {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    text-align: center;
+}
+
+
+.conclusao-conteudo > span {
+
+    color: #f2b7c3;
+
+    font-size: .8rem;
+
+    letter-spacing: 2px;
+
+    font-weight: bold;
+}
+
+
+.conclusao h2 {
+
+    font-size: clamp(2.4rem, 5vw, 4.5rem);
+
+    line-height: 1.05;
+
+    margin: 20px 0 30px;
+}
+
+
+.conclusao p {
+
+    max-width: 750px;
+
+    margin: 0 auto 18px;
+
+    color: #d5dfda;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    padding: 45px 8%;
+
+    background: #172d24;
+
+    color: white;
+
+    text-align: center;
+}
+
+
+.footer-logo {
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 10px;
+
+    font-size: 1.3rem;
+
+    margin-bottom: 12px;
+}
+
+
+.footer-logo i {
+
+    color: #f2b7c3;
+}
+
+
+footer p {
+
+    color: #aebbb4;
+
+    font-size: .9rem;
+}
+
+
+footer .direitos {
+
+    margin-top: 8px;
+
+    font-size: .75rem;
+}
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+/* Tablets e telas médias */
+@media (max-width: 1100px) {
+    header { padding: 16px 5%; }
+    nav { gap: 18px; }
+
+    .introducao,
+    .alternativas-conteudo { gap: 50px; }
+
+    .impactos-grid { grid-template-columns: repeat(2, 1fr); }
+
+    .impacto:last-child {
+        grid-column: 1 / -1;
+        max-width: 550px;
+        width: 100%;
+        justify-self: center;
+    }
+
+    .etapas { grid-template-columns: repeat(2, 1fr); }
+}
+
+
+/* Tablets pequenos / celulares em paisagem */
+@media (max-width: 800px) {
+    header { padding: 15px 5%; }
+
+    .logo h1 { font-size: 1.25rem; }
+
+    nav {
+        gap: 10px 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a { font-size: .85rem; }
+
+    .banner {
+        min-height: 75vh;
+        padding: 55px 6%;
+    }
+
+    .banner h2 {
+        font-size: clamp(2.8rem, 10vw, 4.5rem);
+    }
+
+    .banner p { font-size: 1.05rem; }
+
+    .introducao,
+    .alternativas-conteudo {
+        grid-template-columns: 1fr;
+    }
+
+    .introducao {
+        padding: 85px 6%;
+        gap: 35px;
+    }
+
+    .composicao,
+    .impactos,
+    .alternativas,
+    .pesquisa {
+        padding: 85px 6%;
+    }
+
+    .cards { grid-template-columns: repeat(2, 1fr); }
+
+    .impactos-grid { grid-template-columns: 1fr; }
+
+    .impacto:last-child {
+        grid-column: auto;
+        max-width: none;
+    }
+
+    .alternativas-conteudo { gap: 40px; }
+
+    .etapas { grid-template-columns: repeat(2, 1fr); }
+
+    .linha-ciclo { gap: 15px; }
+
+    .conclusao { padding: 95px 6%; }
+}
+
+
+/* Celulares */
+@media (max-width: 600px) {
+
+    /* Header */
+    header {
+        padding: 12px 5%;
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .logo { gap: 9px; }
+
+    .logo-simbolo {
+        width: 34px;
+        height: 34px;
+    }
+
+    .logo h1 { font-size: 1.15rem; }
+
+    nav {
+        width: 100%;
+        gap: 8px 13px;
+    }
+
+    nav a { font-size: .78rem; }
+
+
+    /* Banner */
+    .banner {
+        min-height: 78vh;
+        padding: 45px 6%;
+    }
+
+    .tag {
+        padding: 6px 12px;
+        font-size: .68rem;
+        letter-spacing: 1.5px;
+        margin-bottom: 18px;
+    }
+
+    .banner h2 {
+        font-size: clamp(2.45rem, 13vw, 3.5rem);
+        line-height: 1.02;
+        margin-bottom: 20px;
+    }
+
+    .banner p {
+        font-size: .95rem;
+        line-height: 1.5;
+        margin-bottom: 28px;
+    }
+
+    .btn {
+        padding: 13px 22px;
+        font-size: .9rem;
+    }
+
+
+    /* Títulos */
+    .titulo-secao h2 {
+        font-size: clamp(1.8rem, 8vw, 2.5rem);
+    }
+
+    .titulo-secao p { font-size: .95rem; }
+
+
+    /* Espaçamento */
+    .introducao,
+    .composicao,
+    .impactos,
+    .alternativas,
+    .pesquisa {
+        padding: 65px 6%;
+    }
+
+
+    /* Introdução */
+    .introducao-conteudo p { font-size: 1rem; }
+
+
+    /* Composição */
+    .cards {
+        grid-template-columns: 1fr;
+        margin-top: 40px;
+    }
+
+    .card { padding: 28px 24px; }
+
+    .icone { margin-bottom: 18px; }
+
+
+    /* Impactos */
+    .impactos-grid {
+        margin: 40px auto;
+        gap: 16px;
+    }
+
+    .impacto { padding: 28px 24px; }
+
+    .impacto i {
+        font-size: 2.2rem;
+        margin-bottom: 18px;
+    }
+
+    .impacto h3 { font-size: 1.3rem; }
+
+
+    /* Ciclo de vida */
+    .ciclo { margin-top: 55px; }
+
+    .ciclo h3 {
+        font-size: 1.3rem;
+        margin-bottom: 25px;
+    }
+
+    .linha-ciclo {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .linha-ciclo > i { transform: rotate(90deg); }
+
+    .linha-ciclo strong { font-size: .85rem; }
+
+
+    /* Alternativas */
+    .alternativas-conteudo {
+        margin: 40px auto;
+        gap: 30px;
+    }
+
+    .alternativa-texto p { font-size: 1rem; }
+
+    .mini-card {
+        gap: 14px;
+        padding: 20px;
+    }
+
+    .mini-card > i {
+        font-size: 1.45rem;
+        flex-shrink: 0;
+    }
+
+    .mini-card h3 { font-size: 1rem; }
+    .mini-card p { font-size: .85rem; }
+
+    .observacao {
+        padding: 18px;
+        gap: 12px;
+    }
+
+    .observacao p { font-size: .9rem; }
+
+
+    /* Pesquisa */
+    .etapas {
+        grid-template-columns: 1fr;
+        margin: 40px auto;
+        gap: 15px;
+    }
+
+    .etapa { padding: 24px; }
+
+    .etapa > span { font-size: 1.7rem; }
+
+    .dados { margin-top: 50px; }
+
+    .dados h3 { font-size: 1.45rem; }
+
+    .dados-placeholder {
+        min-height: 190px;
+        padding: 25px 15px;
+    }
+
+    .dados-placeholder i { font-size: 2.5rem; }
+
+    .dados-placeholder span {
+        text-align: center;
+        font-size: .7rem;
+        line-height: 1.5;
+    }
+
+
+    /* Conclusão */
+    .conclusao { padding: 75px 6%; }
+
+    .conclusao h2 {
+        font-size: clamp(2.2rem, 10vw, 3.2rem);
+    }
+
+    .conclusao p { font-size: .95rem; }
+
+
+    /* Rodapé */
+    footer { padding: 35px 6%; }
+
+    .footer-logo { font-size: 1.15rem; }
+
+    footer p { font-size: .8rem; }
+
+    footer .direitos { font-size: .7rem; }
+}
+
+
+/* Celulares muito pequenos */
+@media (max-width: 380px) {
+    nav { gap: 7px 10px; }
+    nav a { font-size: .72rem; }
+
+    .banner h2 { font-size: 2.3rem; }
+    .banner p { font-size: .9rem; }
+
+    .btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .card,
+    .impacto,
+    .mini-card,
+    .etapa {
+        padding: 22px 18px;
+    }
+
+    .observacao { padding: 16px; }
+}
+
+
+/* Touch: evita efeitos de hover presos na tela */
+@media (hover: none) {
+    .card:hover,
+    .impacto:hover,
+    .btn:hover {
+        transform: none;
+    }
+}
+
+
+/* Evita elementos largos causando rolagem horizontal */
+img,
+svg,
+video {
+    max-width: 100%;
+    height: auto;
+}
+
+p,
+h1,
+h2,
+h3,
+span,
+a {
+    overflow-wrap: break-word;
+}
